@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owen Beats | About Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" 
+            rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .about-container #left-side {
+            width: 35%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-container #left-side img {
+            width: 80%;
+            margin-top: 2rem;
+        }
+
+        .about-container #right-side {
+            width: 60%;
+            margin: 2rem;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 2.2rem;
+        }
+
+        h3 {
+            width: 30%;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.2rem;
+            background-color: black;
+            padding: .5rem;
+            color: white;
+        }
+
+        p {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        li {
+            text-decoration: none;
+            list-style-type: none;
+            margin: auto 3rem;
+        }
+
+        a {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+            color: black;
+        }
+
+        a:hover {
+            text-decoration: none;
+            background-color: black;
+            padding: .5rem;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .about-container {
+                display: block;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .about-container #left-side {
+                width: 0%;
+                margin: -1rem;
+            }
+
+            .about-container #right-side {
+                width: 100%;
+                margin: 0;
+                align-items: center;
+                justify-content: center;
+            }
+
+            li {
+                margin: auto 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img src="./logo.jpg" alt="">
+    </div>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="about.html">About Us</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact Us</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="about-container">
+        <aside id="left-side">
+            <img src="about.jpg" alt="">
+        </aside>
+        <aside id="right-side">
+            <h2>
+                ABOUT US
+            </h2>
+            <h3>
+                Our mission
+            </h3>
+            <p>
+                Every beat we craft is a labor of love, a symphony of creativity, 
+                and a reflection of the passion that drives us. We understand 
+                the power of music in touching the deepest recesses of the human 
+                soul. That's why we pour our heart and soul into every note, 
+                every rhythm, and every melody.
+            </p>
+            <h3>
+                Our Beats
+            </h3>
+            <p>
+                Our beats are not just sounds; they are the threads that weave 
+                the tapestry of your life's soundtrack. They have the power to 
+                uplift, to heal, to energize, and to transport you to another 
+                world. With Owen Beats, you're not just getting music; you're 
+                getting an experience.
+            </p>
+            <h3> Our believes </h3>
+            <p>
+                We believe that music has the unique ability to inspire and 
+                connect people across borders, cultures, and languages. It 
+                transcends boundaries and speaks to the core of our humanity. 
+                Through our beats, we aim to inspire you to create, to dream, 
+                and to feel the beauty of life in its purest form.
+            </p>
+            <h3 >Here's our beats!</h3>
+            <p>
+                <ul>
+                    <li><a href="https://youtu.be/-Tdv7g6v7tA?si=e5MQgS7hXuh0rSPe" 
+                        target="_blank">Silent</a></li>
+                    <li><a href="https://youtu.be/dq7FzJwUeMg?si=AdE26CbiJN9HUw5U" 
+                        target="_blank">2am</a></li>
+                    <li><a href="https://youtu.be/Uofj8uCD6-8?si=Ekem-jE_tqlvhOFE" 
+                        target="_blank">no sleep</a></li>
+                    <li><a href="https://youtu.be/UJuxONj3uyg?si=BpOTZhHSCdFZ_2gg" 
+                        target="_blank">Streamline</a></li>
+                </ul>
+            </p>
+        </aside>
+    </div>
+</body>
+</html>
