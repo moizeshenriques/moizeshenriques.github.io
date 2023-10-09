@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #8B3E06;
+}
+
+#header img {
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+}
+
+h1 {
+    text-align: center;
+    color: #8B3E06;
+}
+
+h2 {
+    text-align: center;
+    color: #CD4D4A;
+}
+
+table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}

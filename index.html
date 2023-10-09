@@ -4,38 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe's HotDog Stand</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" 
             rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Owen Beats</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="header">
-        <img src="./logo.jpg" alt="">
+        <img src="./logo.png" alt="">
     </div>
-    <nav>
-        <ul>
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="about.html">About Us</a>
-            </li>
-            <li>
-                <a href="contact.html">Contact Us</a>
-            </li>
-        </ul>
-    </nav>
-    <div id="banner-body">
-        <h1>Crafting Beats, Inspiring Souls.</h1>
-        <p> 
-            At Owen Beats, we are more than just music producers; 
-            we are storytellers, architects of emotion, and creators 
-            of unforgettable moments. Our mission is simple yet profound: 
-            <br/><span>Crafting Beats, Inspiring Souls.</span>
-        </p>
+    <div class="container">
+        <h1>Thanks for buying Joe's HotDog!</h1>
+        <h2>Here's a summary of your order:</h2>
     </div>
+
+    <script>
+        const HOTDOG = 3.75;
+        const FRIES = 3.00;
+        const SODA = 2.50;
+
+        numDogs = parseInt(prompt("How many hotdogs do you want?"));
+        numFries = parseInt(prompt("How many french fries do you want?"));
+        numSoda = parseInt(prompt("How many sodas do you want?"));
+
+        subtotal = (numDogs * HOTDOG) + (numFries * FRIES) + (numSoda * SODA);
+
+        discount = 0.00;
+        
+        if (subtotal >= 25) {
+            discount = subtotal * 0.10;
+        }
+
+        totalAfterDiscount = subtotal - discount;
+        mass_tax = totalAfterDiscount * 0.0625;
+        total = totalAfterDiscount + mass_tax;
+
+        function currency(value) {
+            const rounding = (Math.round(value * 100)/100);
+            const numZeros = rounding.toString();
+            const pt = numZeros.split(".");
+
+            if (pt.length === 1) {
+                return '$' + numZeros + ".00";
+            }
+
+            if (pt[1].length === 1) {
+                return '$' + numZeros + "0";
+            }
+
+            return "$" + rounding;
+        }
+
+        document.write("<table>");
+        document.write("<tr><th>Item</th><th>Quantity</th><th>Total Cost</th></tr>");
+        document.write("<tr><td>Hotdogs</td><td>" + numDogs + "</td><td>" 
+            + currency(numDogs * HOTDOG) + "</td></tr>");
+        document.write("<tr><td>Fries</td><td>" + numFries + "</td><td>" 
+            + currency(numFries * FRIES) + "</td></tr>");
+        document.write("<tr><td>Sodas</td><td>" + numSoda + "</td><td>" 
+            + currency(numSoda * SODA) + "</td></tr>");
+        document.write("<tr><th colspan='2'>Subtotal before discount</th><td>" 
+            + currency(subtotal) + "</td></tr>");
+        document.write("<tr><th colspan='2'>Discount</th><td>" 
+            + currency(discount) + "</td></tr>");
+        document.write("<tr><th colspan='2'>Subtotal after discount</th><td>" 
+            + currency(totalAfterDiscount) + "</td></tr>");
+        document.write("<tr><th colspan='2'>Tax Amount</th><td>" 
+            + currency(mass_tax) + "</td></tr>");
+        document.write("<tr><th colspan='2'>Final Total</th><td>" 
+            + currency(total) + "</td></tr>");
+        document.write("</table>");
+    </script>
 </body>
 </html>
